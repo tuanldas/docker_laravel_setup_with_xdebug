@@ -18,6 +18,7 @@ services:
     volumes:
       - ./:/var/www/app
     command: [ "/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf" ]
+    env_file: '.env'
     depends_on:
       - mysql
     networks:
